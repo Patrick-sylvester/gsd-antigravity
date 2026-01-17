@@ -50,7 +50,11 @@ Remove-Item -Path "temp-gsd" -Recurse -Force
 For GSD commands available across all projects:
 
 ```powershell
-# Copy workflows to global Antigravity location
+# Create global directories (if they don't exist)
+New-Item -Path "$env:USERPROFILE\.gemini\antigravity\workflows\" -ItemType Directory -Force
+New-Item -Path "$env:USERPROFILE\.gemini\antigravity\skills\" -ItemType Directory -Force
+
+# Copy workflows and skills
 Copy-Item -Path ".agent\workflows\gsd-*.md" -Destination "$env:USERPROFILE\.gemini\antigravity\workflows\" -Force
 Copy-Item -Path ".agent\skills\*" -Destination "$env:USERPROFILE\.gemini\antigravity\skills\" -Recurse -Force
 ```
