@@ -40,7 +40,7 @@ Copy the GSD folders into your project's `.agent/` directory:
 
 ```powershell
 # From your project root
-git clone https://github.com/glittercowboy/get-shit-done.git temp-gsd
+git clone https://github.com/Patrick-sylvester/gsd-antigravity.git temp-gsd
 Copy-Item -Path "temp-gsd\.agent\*" -Destination ".agent\" -Recurse -Force
 Remove-Item -Path "temp-gsd" -Recurse -Force
 ```
